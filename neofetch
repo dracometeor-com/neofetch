@@ -10942,7 +10942,9 @@ main() {
     get_cache_dir
     old_functions
     print_info
-    dynamic_prompt
+    # dynamic_prompt
+    # put cursor on the bottom
+    tput cup $(tput lines) 0 
 
     # w3m-img: Draw the image a second time to fix
     # rendering issues in specific terminal emulators.
