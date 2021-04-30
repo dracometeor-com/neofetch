@@ -5,6 +5,9 @@ all:
 	@echo Run \'make install\' to install Neofetch.
 
 install:
+	@mkdir -p /etc/neofetch
+	@cp -p defaultconfig.conf /etc/neofetch/neofetch.conf
+	@cp -p defaultimage.jpg /etc/neofetch/neofetch.jpg
 	@mkdir -p $(DESTDIR)$(PREFIX)/bin
 	@mkdir -p $(DESTDIR)$(MANDIR)/man1
 	@cp -p neofetch $(DESTDIR)$(PREFIX)/bin/neofetch
